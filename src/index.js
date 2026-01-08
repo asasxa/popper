@@ -1,5 +1,5 @@
 import Popover from './js/popover.js';
-import './css/popover.css';
+import './css/Popover.css';
 import './css/button.css';
 
 document.querySelectorAll('[data-title][data-content]').forEach((button) => {
