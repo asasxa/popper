@@ -1,4 +1,4 @@
-import Popover from './js/Popover.js';
+import Popover from './js/popover.js';
 import './css/popover.css';
 import './css/button.css';
 
