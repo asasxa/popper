@@ -1,4 +1,4 @@
-import Popover from '../js/Popover';
+import Popover from '../js/popover.js';
 
 describe('Popover', () => {
   beforeEach(() => {
