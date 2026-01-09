@@ -28,16 +28,18 @@
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-.popover .arrow {
+.bs-popover-top > .arrow {
   position: absolute;
+  bottom: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   width: 0.8rem;
   height: 0.4rem;
-  margin: 0 0.3rem;
 }
 
-.popover .arrow::before,
-.popover .arrow::after {
+.bs-popover-top > .arrow::before,
+.bs-popover-top > .arrow::after {
   position: absolute;
   display: block;
   content: "";
@@ -45,28 +47,15 @@
   border-style: solid;
 }
 
-.popover .arrow::before {
-  border-width: 0.4rem;
-}
-
-.popover .arrow::after {
-  border-width: 0.4rem;
-}
-
-.bs-popover-top > .arrow,
-.bs-popover-auto[x-placement^="top"] > .arrow {
-  bottom: -0.4rem;
-}
-
-.bs-popover-top > .arrow::before,
-.bs-popover-auto[x-placement^="top"] > .arrow::before {
+.bs-popover-top > .arrow::before {
   bottom: 0;
+  border-width: 0.4rem;
   border-top-color: rgba(0, 0, 0, 0.25);
 }
 
-.bs-popover-top > .arrow::after,
-.bs-popover-auto[x-placement^="top"] > .arrow::after {
+.bs-popover-top > .arrow::after {
   bottom: 1px;
+  border-width: 0.4rem;
   border-top-color: #fff;
 }
 

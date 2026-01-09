@@ -28,14 +28,13 @@ export default class Popover {
     if (this.isVisible) return;
 
     this.popover = this.createPopover();
-    document.body.appendChild(this.popover);
+    document.body.append(this.popover);
 
-    // Позиционируем после добавления в DOM!
     const triggerRect = this.trigger.getBoundingClientRect();
     const popoverRect = this.popover.getBoundingClientRect();
 
     const left = triggerRect.left + triggerRect.width / 2 - popoverRect.width / 2;
-    const top = triggerRect.top - popoverRect.height - 8; // 8px ≈ высота стрелки
+    const top = triggerRect.top - popoverRect.height - 8;
 
     this.popover.style.position = 'absolute';
     this.popover.style.left = `${left}px`;
@@ -43,16 +42,14 @@ export default class Popover {
     this.popover.style.display = 'block';
 
     this.isVisible = true;
-
-    // Закрытие по клику вне
     document.addEventListener('click', this.handleOutsideClick);
   }
 
   hide() {
     if (!this.isVisible) return;
 
-    if (this.popover && this.popover.parentNode) {
-      this.popover.parentNode.removeChild(this.popover);
+    if (this.popover) {
+      this.popover.remove();
     }
     this.popover = null;
     this.isVisible = false;
